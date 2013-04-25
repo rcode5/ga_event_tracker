@@ -28,6 +28,10 @@ You might add (initialize) the plugin like this (in your javascript onload):
 
 If you send in a function, but the result is null or undefined, we'll use the default value of 'empty'.
 
+## Building 
+
+If you care to make modifications, the `compile.sh` script has been included to compile the Javascript from the Coffeescript.
+
 ## Contributions
 
 Feel free to fork, add your ideas and submit a pull request.
