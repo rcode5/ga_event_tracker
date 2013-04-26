@@ -34,7 +34,7 @@ If you care to make modifications, the `compile.sh` script has been included to 
 
 ## Contributions
 
-Feel free to fork, add your ideas and submit a pull request.
+Feel free to fork, add your ideas and submit a pull request.  If you do, please update the tests in the `spec` directory.  You'll notice the `specRunner.html` file which should run the tests for you using Jasmine.
 
 ## TODO
 

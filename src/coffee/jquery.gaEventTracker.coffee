@@ -44,7 +44,6 @@ $.fn.gaEventTracker = (gaq, category, action, label) ->
       action ||= getAction
       label ||= getLabel
       args = $.map([category, action, label], (entry) ->
-        console.log entry
         if typeof entry is "function"
           try
             val = entry.apply(target)

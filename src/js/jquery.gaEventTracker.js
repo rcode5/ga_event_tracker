@@ -21,7 +21,6 @@
         label || (label = getLabel);
         args = $.map([category, action, label], function(entry) {
           var val;
-          console.log(entry);
           if (typeof entry === "function") {
             try {
               val = entry.apply(target);
