@@ -36,3 +36,6 @@ If you care to make modifications, the `compile.sh` script has been included to 
 
 Feel free to fork, add your ideas and submit a pull request.
 
+## TODO
+
+* add other event listeners other than 'click' - maybe 'blur', 'focus', 'mouseover' (?)
