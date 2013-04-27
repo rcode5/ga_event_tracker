@@ -11,24 +11,22 @@
 #
 # You might add (initialize the plugin like this):
 #
-#  _gaq = window._gaq || []
-#
 #  // to use the data values from the tag
-#  $('.trackit.default').gaEventTracker(_gaq)
+#  $('.trackit.default').gaEventTracker()
 #
 #  // to specify values
-#  $('.trackit.with-values').gaEventTracker(_gaq, 'This Category', 'This Label', 'This Action')
+#  $('.trackit.with-values').gaEventTracker('This Category', 'This Label', 'This Action')
 #
 #  // to specify functions
 #  var getCategory = function() { return this.innerHTML; }
-#  $('.trackit.with-functions').gaEventTracker(_gaq, getCategory)
+#  $('.trackit.with-functions').gaEventTracker(getCategory)
 #
 #  If you send in a function, but the result is null or undefined, we'll use the default value of 'empty'.
 #
 #  Author: Jon Rogers <jon@bunnymatic.com>
 #  Github: https://github.com/bunnymatic
 
-$.fn.gaEventTracker = (gaq, category, action, label) ->
+$.fn.gaEventTracker = (category, action, label) ->
 
   getCategory = () ->
     $(this).data 'category'
@@ -51,5 +49,5 @@ $.fn.gaEventTracker = (gaq, category, action, label) ->
         else
           entry
       )
-      gaq.push ["_trackEvent", args[0], args[1], args[2]]
+      window._gaq.push ["_trackEvent", args[0], args[1], args[2]]
       true
