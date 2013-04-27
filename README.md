@@ -14,19 +14,19 @@ Include the source (either Coffeescript or Javascript file) in your application.
 
 You might add (initialize) the plugin like this (in your javascript onload):
 
-    _gaq = window._gaq || []
-
     // to use the data values from the tag
-    $('.trackit.default').gaEventTracker(_gaq)
+    $('.trackit.default').gaEventTracker()
 
     // to specify values
-    $('.trackit.with-values').gaEventTracker(_gaq, 'This Category', 'This Label', 'This Action')
+    $('.trackit.with-values').gaEventTracker('This Category', 'This Label', 'This Action')
 
     // to specify functions
     var getCategory = function() { return this.innerHTML; }
-    $('.trackit.with-functions').gaEventTracker(_gaq, getCategory)
+    $('.trackit.with-functions').gaEventTracker(getCategory)
 
 If you send in a function, but the result is null or undefined, we'll use the default value of 'empty'.
+
+This assumes you already have Google Analytics' script tag setup in your app/page.  Read more about Google Analytics setup [here](See https://support.google.com/analytics/answer/1008080?hl=en&utm_medium=et&utm_campaign=en_us&utm_source=SetupChecklist)
 
 ## Building 
 
